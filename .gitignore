@@ -7,3 +7,6 @@ target
 .springBeans
 mbg.xml
 ssm-crud.iml
+src/main/java/com/atguigu/crud/utils/
+src/main/webapp/WEB-INF/lib/
+src/test/
