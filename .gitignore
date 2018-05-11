@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+.settings
+target
+.classpath
+.project
+.springBeans
+mbg.xml
+ssm-crud.iml
