@@ -5,8 +5,35 @@
 	<artifactId>ssm-crud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	<properties>
+		<maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+		<jdk.version>1.8</jdk.version>
+		<maven.surefire.plugin.version>2.21.0</maven.surefire.plugin.version>
+	</properties>
 
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.plugin.version}</version>
+				<configuration>
+					<forkMode>once</forkMode>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<!--引入项目依赖的jar包 -->
 	<!-- SpringMVC、Spring -->
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
